@@ -431,6 +431,10 @@ body {
 }
 
 @media (min-width: 47.99875em) {
+  .prewiew > div {
+    min-height: 23.125rem;
+  }
+
   .forecast h2 {
     padding-right: 1.25rem;
   }
@@ -466,6 +470,10 @@ body {
 
   .footer {
     padding: 2.8125rem 0;
+  }
+
+  .prewiew > div {
+    padding: 35px 0;
   }
 
   .rewiews__title {
