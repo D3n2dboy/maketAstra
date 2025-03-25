@@ -1,0 +1,158 @@
+//====================================================================================================
+
+.page {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 30%;
+		right: 0;
+		width: 153.5px;
+		height: 307px;
+		background: url("../img/decor.png") 0 0 no-repeat;
+
+		@media (max-width: $tablet) {
+			opacity: 0.3;
+			z-index: -1;
+		}
+	}
+}
+
+.prewiew {
+	// @media (min-width: $mobile) {
+	// 	min-height: rem(370);
+	// }
+
+	// @media (max-width: $mobile) {
+	// 	padding: 35px 0;
+	// }
+}
+
+.image-hover {
+	overflow: hidden;
+	border-radius: rem(10);
+	img {
+		transition: all 0.5s ease;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+}
+
+.prewiew h1 {
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+//====================================================================================================
+
+.forecast h2 {
+	@media (min-width: $mobile) {
+		padding-right: rem(20);
+	}
+}
+
+.forecast h5 {
+	height: 100%;
+}
+
+.forecast a {
+	font-size: rem(16);
+}
+
+.forecast__item {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	justify-content: space-between;
+	gap: rem(15);
+
+	@media (min-width: $mobile) {
+		row-gap: rem(45);
+	}
+}
+
+.forecast__item .row {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.forecast__item .link-line span {
+	position: relative;
+	display: inline-flex;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.forecast__item .link-line span::after {
+	content: ">";
+	position: absolute;
+	top: 0;
+	left: 110%;
+}
+
+.forecast__item .row:last-child {
+	gap: rem(10);
+
+	@media (min-width: $mobile) {
+		gap: rem(36);
+	}
+}
+
+.forecast__item.row p {
+	margin-bottom: rem(65px);
+}
+
+.rewiews {
+}
+
+.rewiews__title {
+	font-size: rem(32);
+
+	@media (max-width: $mobile) {
+		font-size: rem(22);
+	}
+}
+
+.accordion-item,
+.accordion-item:first-of-type {
+	border: 2px solid $accentColor !important;
+	background-color: inherit;
+	border-radius: 0;
+	margin-bottom: rem(55);
+}
+
+.accordion-item {
+	padding: rem(20) 0;
+}
+
+.accordion-but {
+	position: relative;
+	width: 100%;
+	text-align: left;
+	padding: rem(10) rem(20);
+	font-weight: 700;
+	color: $accentColor;
+
+	&::before {
+		transition: all 0.3s ease;
+		content: "";
+		position: absolute;
+		top: rem(8);
+		right: rem(30);
+		width: 22px;
+		height: 22px;
+		background: url("../img/plus-icon.svg") 0 0 no-repeat;
+		transform: rotate(45deg);
+	}
+}
+.collapsed {
+	&::before {
+		transform: rotate(0);
+	}
+}

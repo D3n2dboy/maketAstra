@@ -1,0 +1,26 @@
+//====================================================================================================
+
+.footer {
+	background-color: $accentColor;
+	color: #fff;
+	padding-top: rem(42);
+	padding-bottom: rem(81);
+
+	@media (max-width: $mobile) {
+		padding: rem(45) 0;
+	}
+}
+
+.footer__title {
+	font-family: $fontTitle;
+	font-size: rem(42);
+}
+
+.footer__link {
+	&:hover {
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
+//====================================================================================================

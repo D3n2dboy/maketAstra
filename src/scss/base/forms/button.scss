@@ -1,0 +1,44 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button,
+.button-accent {
+	transition: all 0.2s ease;
+}
+
+.button {
+	display: inline-flex;
+	padding: rem(4) rem(25);
+	border: 1px solid #000;
+	border-radius: rem(7);
+	font-size: rem(16);
+	background-color: $bgColor;
+	color: $mainColor;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $bgColor;
+			background-color: $accentColor;
+			opacity: 0.8;
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+
+	&:not(:last-child) {
+		margin-right: rem(22);
+	}
+}
+
+.button-accent {
+	color: #fff;
+	background-color: $accentColor;
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+}
